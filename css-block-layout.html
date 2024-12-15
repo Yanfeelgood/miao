@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+      }
+      html{
+        padding: 0;
+      }
+      div.a {
+        margin: 0;
+        background-color: black;
+      }
+      div.a  p {
+        margin: auto;
+        width: 600px;
+        color: aliceblue;
+        background-color: black;
+      }
+      div.b {
+        width: 600px;
+        margin: auto;
+      }
+      section.f{
+        padding: 0;
+        margin-top: 0;
+      }
+      section.f > div{
+        height: 34px;
+        width: 174px;
+        background-color: pink;
+        border-style: solid;
+        border-color: black;
+        border-width: 3px;
+        text-align: center;
+        line-height: 34px;
+        padding: 0;
+      }
+      section.f > div{
+        margin-right: 30px;
+        margin-bottom: 15px;
+      }
+      section.f > div:nth-child(n+5){
+        margin-left: 210px;
+      }
+      section.f > div:nth-child(n+9){
+        margin-left: 420px;
+      }
+      section.f > div:nth-child(5){
+        margin-top: -220px;
+      }
+      section.f > div:nth-child(9){
+        margin-top: -220px;
+      }
+      .grid{
+        width: 630px;
+        margin: auto;
+        font-size: 0;
+      }
+      .item{
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 180px;
+        height: 40px;
+        box-sizing: border-box;
+        border: 3px solid red;
+        font-size: 16px;
+        margin-right: 30px;
+
+      }
+      
+      li {
+        border-bottom: 1px dotted; 
+        margin-left: -40px;
+        margin-bottom: -1px;
+        padding-top: 1px;
+      }
+      ul{
+        overflow: hidden;
+        list-style: none;
+      }
+      section > div:hover {
+        background-color: red;
+      }
+      footer {
+        margin: 10px 0;
+        background-color: violet;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <p>hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果</p>
+    </div>
+    <div class="b">
+      <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+      <section class="f">
+        <div>宽180高40(包含边框)</div>
+        <div>水平间隙30px</div>
+        <div>垂直间隙15px</div>
+        <div>边框宽度3px</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+      </section>
+      <section class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+      </section>
+      <ul>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+      </ul>
+    </div>
+    <footer>
+              ©版权所有
+<br>
+本页所有布局均使用块元素</footer>
+</body>
+</html>
