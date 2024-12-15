@@ -26,16 +26,16 @@
     console.log(result)
 </script>
 
-<script type="ok" id="ch0103/04"> 
+<script xtype="ok" id="ch0103/04"> 
     var a  = Number(prompt('输入除数'))
     var b  = Number(prompt('输入被除数'))
 
-    var c = a / b
+    var c =Math.trunc(a / b)
     var d = a % b
     
     
 
-    console.log(c + ' ' + d)
+    console.log(c  , d)
 </script>
 
 <script type="ok" id="ch0103/05"> 
@@ -74,10 +74,10 @@
 <script type="ok" id="ch0103/09"> 
     var r  = Number(prompt('输入圆的半径'))
     var d =  Number(2 * r).toFixed(4)
-    var l =  Number(2 * Π * r).toFixed(4)
-    var s =  Number(Π * r ** 2).toFixed(4)
+    var l =  Number(2 * 3.14159 * r).toFixed(4)
+    var s =  Number(3.14159 * r ** 2).toFixed(4)
     
-    console.log( d + ''+ l + '' + s )
+    console.log( d , l , s )
 </script>
 
 <script type="ok" id="ch0103/10"> 
@@ -89,6 +89,14 @@
     console.log(R)
 </script>
 
+<script xtype="ok" id="ch0103/11">
+    var  a = Number(prompt('输入电阻值r1'))
+    var  b = Number(prompt('输入电阻值r2'))
+
+    var R =a % b
+
+    console.log(R.toFixed(4))
+</script>
 <script type="ok" id="ch0103/12"> 
     var r  = Number(prompt('输入球的半径r'))
     
@@ -98,23 +106,34 @@
     console.log(v)
 </script>
 
+<script type="ok" id="ch0103/13"> 
+    var n = Number(prompt('n'))
+    
+
+    var ge = n % 10
+    var shi = (n - ge) / 10 % 10
+    var bai = (n - ge - 10 * shi) /100 % 10
+
+    console.log('' + ge + shi + bai)
+</script>
+
 <script type="ok" id="ch0103/14"> 
     var h  = Number(prompt('输入小圆桶的深h(cm)'))
     var r  = Number(prompt('输入小圆桶的底面半径r(cm)'))
 
-    var water = 20000 / (Π * r ** 2 * h)
+    var water =Math.ceil( 20000 / (3.14159 * r ** 2 * h))
 
-    console.log(Math.ceil(water))
+    console.log(water)
 </script>
-
+ 
 <script type="ok" id="ch0103/15"> 
     var n  = Number(prompt('输入苹果数量n'))
     var x  = Number(prompt('输入虫子吃一个苹果需要多少小时x'))
     var y  = Number(prompt('输入经过时间y'))
     
-    var  result = y - nx   
+    var  result =Math.floor( y - nx  ) 
     
-    console.log(Math.floor(result))
+    console.log(result)
 </script>
 
 <script type="ok" id="ch0103/18"> 
@@ -136,7 +155,7 @@
     console.log(result)
 </script>
 
-<script xtype="ok" id="ch0103/15"> 
+<script type="ok" id="ch0103/20"> 
     var n  = Number(prompt('输入n'))
  
     var  result = 2 ** n 
