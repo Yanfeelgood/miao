@@ -272,6 +272,31 @@
    
 </script>
 
+<script  type="ok" id="ch0104/09"> 
+    var n  = Number(prompt('n'))
+ 
+    if (n % 3 ==0 && n % 5 == 0 && n % 7 == 0)
+       console.log('3 5 7')
+    else {
+        if (n % 3 == 0 && n % 5 == 0){
+            console.log('3 5')
+        } else if (n % 3 == 0 && n % 7 == 0){
+            console.log('3 7')
+        } else if (n % 5 == 0 && n % 7 == 0){
+            console.log('5 7')
+        } else if (n % 3 == 0){
+            console.log('3')
+        } else if (n % 5 == 0){
+            console.log('5')
+        } else if (n % 7 == 0){
+            console.log('7')
+        } else {
+            console.log('n')
+        }
+
+    }
+</script>
+
 <script type="ok" id="ch0104/10"> 
     var x  = Number(prompt('输入语文'))
     var y  = Number(prompt('输入数学'))
@@ -318,17 +343,17 @@
 </script>
 
 <script  type="ok" id="ch0104/14"> 
-    var n  = Number(prompt('重量'))
-   
- 
-    if (n >= 0 && n < 5)
-       var y = -n + 2.5
-    else if(n >= 5 && n < 10)
-       var y = 2 - 1.5 * (n - 3) * (n - 3)
-    else if (n >= 10 && n < 20)
-       var y =n / 2 - 1.5 
+    var w  = Number(prompt('重量'))
+    var jiaji =prompt('jiaji?')
+    var price = 8
+    if (w >=1000 ){
+        price = price +  Math.ceil((w - 1000) / 500) * 4
+    } 
+    if (jiaji == 'y' ){
+        price = price + 5
+    }
        
-    console.log(y.toFixed(3))
+    console.log(price)
 </script>
 
 <script type="ok" id="ch0104/15"> 
@@ -360,7 +385,6 @@
        console.log('Y')
     else 
        console.log('N')
-    console.log(y.toFixed(3))
 </script>
 
 <script type="ok" id="ch0104/18"> 
@@ -375,24 +399,69 @@
     
 </script>
 
-<script xtype="ok" id="ch0104/19"> 
+<script type="ok" id="ch0104/19"> 
     var a  = Number(prompt('数字1'))
     var b  = Number(prompt('数字2'))
-    var c  = String(prompt('运算符'))
+    var op  = prompt('运算符')
     
-    if(c )
-    console.log('yes')
-    else
-    console.log('no')
-    
+    if(op == '+' ){
+        console.log(a + b)
+    }else if(op == '-'){
+            console.log(a - b)
+    }else if(op == '*'){
+                console.log(a * b)
+    }else if(op == '/'){
+        if(b == 0){
+            console.log('Dicided by zero!')
+        }else{
+                console.log(a / b)
+        }
+    }else{
+        console.log('Invalid operator')
+    }
 </script>
 
-<script xtype="ok" id="ch0104/21"> 
+<script type="ok" id="ch0104/20"> 
+    var a  = Number(prompt('a'))
+    var b  = Number(prompt('b'))
+    var c  = Number(prompt('c'))
+    
+    var delta = b * b - 4 * a * c 
+    if (delta == 0) {
+        var x = -b / (2 * a)
+        console.log('x1=x2='+ (x).toFixed(5))
+    } else if (delta > 0) {
+        var x1 = (-b + Math.sqrt(delta)) / (2 * a)
+        var x2 = (-b - Math.sqrt(delta)) / (2 * a)
+        console.log('x1='+ (x1).toFixed(5) + ';x2=' + (x2).toFixed(5))
+    }else{
+        var x1real = -b / (2 * a)
+        var x1imag = -Math.sqrt(-delta) / (2 * a)
+        if (x1imag > 0){
+            var x1 = (x1real).toFixed(5) + '+' + (x1imag).toFixed(5) + 'i'
+        }else{
+            var x1 = (x1real).toFixed(5) + '-' + (x1imag).toFixed(5) + 'i'
+        }
+        var x2real = -b / (2 * a)
+        var x2imag = Math.sqrt(-delta) / (2 * a)
+        if (x2imag > 0){
+            var x2 = (x2real).toFixed(5) + '+' + (x2imag ).toFixed(5)+ 'i'
+        }else{
+            var x2 =+ (x2real).toFixed(5) + '-' + (x2imag).toFixed(5) + 'i'
+        }
+
+        console.log('x1=' + x1 + ';x2='+ x2)
+    }
+  
+    console.log(result)
+</script>
+
+<script type="ok" id="ch0104/21"> 
     var n  = Number(prompt('苹果'))
     var x  = Number(prompt('x'))
     var y  = Number(prompt('小时数'))
     
-    var result = n - y / x
-    Math.floor(result)
+    var result = Math.floor(n - y / x)
+  
     console.log(result)
 </script>
