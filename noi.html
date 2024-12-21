@@ -484,7 +484,7 @@
     var sum = 0
     var c = 0
     while(c < 12){
-        money = Number(prompt(结余))
+        money = Number(prompt('结余'))
         sum = sum + money
         c = c + 1
     }
@@ -517,7 +517,7 @@
         c = c + 1
     }
 
-    console.log(sum + '' + (sum / n).toFixed(5))
+    console.log(sum + ' ' + (sum / n).toFixed(5))
 </script>
 
 <script type="ok" id="ch0105/05"> 
@@ -561,9 +561,9 @@
     var jin
     var yin
     var tong
-    var sumj
-    var sumy
-    var sumt
+    var sumj = 0
+    var sumy = 0
+    var sumt = 0
     var c = 0
     while(c < n){
         jin = Number(prompt())
@@ -679,7 +679,7 @@
     
     var result = x * (1 + 0.001) ** n
 
-    console.log(result)
+    console.log(result.toFixed(4))
 </script>
 
 <script type="ok" id="ch0105/15"> 
@@ -688,16 +688,16 @@
     var Y = Number(prompt('Y'))
     var result = M * (1 + R / 100) ** Y
 
-    console.log(result)
+    console.log(Math.floor(result))
 </script>
 
 <script type="ok" id="ch0105/16"> 
     var N  = Number(prompt('N'))
-    var M = 0
+    var M = 1
     var k = Number(prompt('k'))
-    var money = 200 * (1 + k / 100) ** M
-    
-    while(salary > monry){
+    var money = 200
+    var salary = N
+    while(salary < money){
         var money = 200 * (1 + k / 100) ** M
         var salary = N * M
         M = M + 1
@@ -758,7 +758,7 @@
         timeall = time + timeall
         c = c + 1
     }
-    console.log( Math(timeall).ceil)
+    console.log( Math.ceil(timeall))
 </script>
 
 <script type="ok" id="ch0105/20"> 
@@ -769,16 +769,17 @@
     
     while(c < 9){
         h =  h / 2
-        lenth = lenth + h
+        lenth = lenth + h * 2
         c = c + 1
     }
 
     console.log(lenth)
+    console.log(h / 2)
 </script>
 
 <script type="ok" id="ch0105/21"> 
     var N  = Number(prompt('N'))
-    while(N == 1){
+    while(N !== 1){
         if (N % 2 == 0){
             N = N * 3 +1
         } 
@@ -790,18 +791,19 @@
 
 <script type="ok" id="ch0105/22"> 
     
-    var X = 1
+    var X = 0
     var saving = 0
     var mom = 0
 
-    while(X < 13 ){
+    while(X < 12 ){
+        X = X + 1
         saving = saving + 300 
         var budget  = Number(prompt('预算'))
         if (saving < budget){
             console.log(-X)
             X = 20
         }else{
-            X = X + 1
+           
             saving = saving - budget
             while (saving < 100){
             if (saving > 100){
@@ -811,7 +813,7 @@
         }  
     }
    
-    if (x = 13){
+    if (x = 12){
             console.log(mom)
         } 
 </script>
@@ -878,7 +880,7 @@
     var n = 1
     var Sn = 0
 
-    while(Sn > k){
+    while(Sn < k){
         a = a / n 
         Sn = Sn + a 
         n = n + 1
@@ -918,11 +920,12 @@
 <script type="ok" id="ch0105/30"> 
     var m = Number(prompt('m'))
     var k = Number(prompt('k'))
+    var c = 0
     if (m % 19 == 0){
         while(m > 0){
             var x = m % 10
             if ( x == 3){
-                var c = c + 1
+                 c = c + 1
         }
             m = (m - x) / 10
         }
