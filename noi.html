@@ -691,18 +691,18 @@
     console.log(Math.floor(result))
 </script>
 
-<script type="ok" id="ch0105/16"> 
+<script xtype="ok" id="ch0105/16"> 
     var N  = Number(prompt('N'))
     var M = 1
     var k = Number(prompt('k'))
     var money = 200
     var salary = N
-    while(salary < money){
+    while(salary < money || M < 21){
         var money = 200 * (1 + k / 100) ** M
         var salary = N * M
         M = M + 1
     }
-    if (M < 20 ) {
+    if (M <= 20 ) {
         console.log(M)
     }else{
         console.log('Impossible')
@@ -761,7 +761,7 @@
     console.log( Math.ceil(timeall))
 </script>
 
-<script type="ok" id="ch0105/20"> 
+<script xtype="ok" id="ch0105/20"> 
     var h  = Number(prompt('h'))
     var lenth = h
     var far 
@@ -773,14 +773,14 @@
         c = c + 1
     }
 
-    console.log(lenth)
-    console.log(h / 2)
+    console.log(lenth.toFixed(4))
+    console.log((h / 2).toFixed(7))
 </script>
 
-<script type="ok" id="ch0105/21"> 
+<script xtype="ok" id="ch0105/21"> 
     var N  = Number(prompt('N'))
-    while(N !== 1){
-        if (N % 2 == 0){
+    while(N > 1){
+        if (N % 2 == 1){
             N = N * 3 +1
         } 
         N = N / 2
@@ -789,7 +789,7 @@
     console.log('End')
 </script>
 
-<script type="ok" id="ch0105/22"> 
+<script xtype="ok" id="ch0105/22"> 
     
     var X = 0
     var saving = 0
@@ -805,15 +805,14 @@
         }else{
            
             saving = saving - budget
-            while (saving < 100){
-            if (saving > 100){
+            while (saving > 100){
                 saving = saving - 100
                 var mom = mom + 100
-        }}
+        }
         }  
     }
    
-    if (x = 12){
+    if (X = 12){
             console.log(mom)
         } 
 </script>
